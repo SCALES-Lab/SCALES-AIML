@@ -1,0 +1,17 @@
+---
+title: "Reinforcement Learning Theoretical Review"
+author: "William M. Murrah"
+format: html
+---
+
+## Fundamentals of Reinforcement Learning 
+
+### Elements of RL
+
+* A **policy** is a mapping of the actions of an agent give an perceived state of the environment.
+
+* A **reward signal** defines the goal of the agent and is the primary way the *policy* is updated.
+
+* The **value function** is specifies how good a state is with regard to the long-term reward the agent expect to obtain when starting from that state  <!-- TODO: This definition needs refining -->
+
+* Some RL systems involve a **model**, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions.
