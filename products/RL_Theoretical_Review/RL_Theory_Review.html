@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="RL_Theory_Review_files/libs/clipboard/clipboard.min.js"></script>
@@ -73,15 +93,24 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="fundamentals-of-reinforcement-learning">Fundamentals of Reinforcement Learning</h2>
 <section id="elements-of-rl" class="level3">
 <h3 class="anchored" data-anchor-id="elements-of-rl">Elements of RL</h3>
+<p>Basic elements of reinforcement learning <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">(<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">Sutton and Barto 2020</a>)</span>.</p>
 <ul>
 <li><p>A <strong>policy</strong> is a mapping of the actions of an agent give an perceived state of the environment.</p></li>
 <li><p>A <strong>reward signal</strong> defines the goal of the agent and is the primary way the <em>policy</em> is updated.</p></li>
 <li><p>The <strong>value function</strong> is specifies how good a state is with regard to the long-term reward the agent expect to obtain when starting from that state <!-- TODO: This definition needs refining --></p></li>
+<li><p>Some RL systems involve a <strong>model</strong>, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions. The model is used by the agent to plan actions give the state.</p></li>
 </ul>
+<p>The RL methods covered in <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">Sutton and Barto (<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">2020</a>)</span> are focused on estimation of value functions. They do not cover “genetic algorithms, genetic programming, simulated annealing, and other optimization methods”, which do not estimate value functions <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">(<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">Sutton and Barto 2020, 7</a>)</span>. These <em>evolutionary</em> methods do not change the policy due to experience, but keep a static policy throughout.</p>
+<p>These evolutionary methods can be contrasted with <em>learning</em> methods. It seems to me that evolutionary methods are those with between agent selection – each agent has a static policy and selection occurs between “individuals”, while learning methods generate within agent selection, where the policy is adapted to adapt policies to maximize long-term reward by changing value functions.</p>
+
 </section>
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Sutton2020Reinforcementlearningintroduction" class="csl-entry" role="listitem">
+Sutton, Richard S., and Andrew G. Barto. 2020. <em>Reinforcement Learning: An Introduction</em>. Second. <a href="http://incompleteideas.net/book/the-book.html">http://incompleteideas.net/book/the-book.html</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

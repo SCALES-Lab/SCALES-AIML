@@ -2,16 +2,24 @@
 title: "Reinforcement Learning Theoretical Review"
 author: "William M. Murrah"
 format: html
+bibliography: ../../main.bib
 ---
 
-## Fundamentals of Reinforcement Learning 
+## Fundamentals of Reinforcement Learning
 
 ### Elements of RL
 
-* A **policy** is a mapping of the actions of an agent give an perceived state of the environment.
+Basic elements of reinforcement learning [@Sutton2020Reinforcementlearningintroduction].
 
-* A **reward signal** defines the goal of the agent and is the primary way the *policy* is updated.
+-   A **policy** is a mapping of the actions of an agent give an perceived state of the environment.
 
-* The **value function** is specifies how good a state is with regard to the long-term reward the agent expect to obtain when starting from that state  <!-- TODO: This definition needs refining -->
+-   A **reward signal** defines the goal of the agent and is the primary way the *policy* is updated.
 
-* Some RL systems involve a **model**, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions.
+-   The **value function** is specifies how good a state is with regard to the long-term reward the agent expect to obtain when starting from that state <!-- TODO: This definition needs refining -->
+
+-   Some RL systems involve a **model**, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions. The model is used by the agent to plan actions give the state.
+
+The RL methods covered in @Sutton2020Reinforcementlearningintroduction are focused on estimation of value functions. They do not cover "genetic algorithms, genetic programming, simulated annealing, and other optimization methods", which do not estimate value functions [@Sutton2020Reinforcementlearningintroduction, p. 7]. These *evolutionary* methods do not change the policy due to experience, but keep a static policy throughout.
+
+These evolutionary methods can be contrasted with *learning* methods. It seems to me that evolutionary methods are those with between agent selection -- each agent has a static policy and selection occurs between "individuals" -- while learning methods generate within agent selection -- the policy is adapted to maximize long-term reward by preferring value functions.
+
