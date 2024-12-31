@@ -89,8 +89,16 @@ div.csl-indent {
 </header>
 
 
+<section id="reinforcement-learning-resources" class="level2">
+<h2 class="anchored" data-anchor-id="reinforcement-learning-resources">Reinforcement Learning Resources</h2>
+<ul>
+<li><p><a href="https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf">Reinforcement Learning: An Introduction, Second Edition, Sutton and Barto 2018</a> - Seminal textbook on RL focusing on theoretical apsects. Python code for examples can be found <a href="https://github.com/ShangtongZhang/reinforcement-learning-an-introduction/tree/master">here</a>.</p></li>
+<li><p><a href="https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf">Algorithms for Reinforcement Learning, Szepesvari, 2010</a></p></li>
+</ul>
+</section>
 <section id="fundamentals-of-reinforcement-learning" class="level2">
 <h2 class="anchored" data-anchor-id="fundamentals-of-reinforcement-learning">Fundamentals of Reinforcement Learning</h2>
+<p>Reinforcement Learning (RL) is a computational approach to decision making and goal-directed behavior, that entails an agent learning through interaction with its environment.</p>
 <section id="elements-of-rl" class="level3">
 <h3 class="anchored" data-anchor-id="elements-of-rl">Elements of RL</h3>
 <p>Basic elements of reinforcement learning <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">(<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">Sutton and Barto 2020</a>)</span>.</p>
@@ -100,9 +108,12 @@ div.csl-indent {
 <li><p>The <strong>value function</strong> is specifies how good a state is with regard to the long-term reward the agent expect to obtain when starting from that state <!-- TODO: This definition needs refining --></p></li>
 <li><p>Some RL systems involve a <strong>model</strong>, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions. The model is used by the agent to plan actions give the state.</p></li>
 </ul>
+<section id="evolutionary-vs-learning-models" class="level4">
+<h4 class="anchored" data-anchor-id="evolutionary-vs-learning-models">Evolutionary vs Learning Models</h4>
 <p>The RL methods covered in <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">Sutton and Barto (<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">2020</a>)</span> are focused on estimation of value functions. They do not cover “genetic algorithms, genetic programming, simulated annealing, and other optimization methods”, which do not estimate value functions <span class="citation" data-cites="Sutton2020Reinforcementlearningintroduction">(<a href="#ref-Sutton2020Reinforcementlearningintroduction" role="doc-biblioref">Sutton and Barto 2020, 7</a>)</span>. These <em>evolutionary</em> methods do not change the policy due to experience, but keep a static policy throughout.</p>
-<p>These evolutionary methods can be contrasted with <em>learning</em> methods. It seems to me that evolutionary methods are those with between agent selection – each agent has a static policy and selection occurs between “individuals”, while learning methods generate within agent selection, where the policy is adapted to adapt policies to maximize long-term reward by changing value functions.</p>
+<p>These evolutionary methods can be contrasted with <em>learning</em> methods. It seems to me that evolutionary methods are those with between agent selection – each agent has a static policy and selection occurs between “individuals” – while learning methods generate within agent selection – the policy is adapted to maximize long-term reward by preferring value functions. The evolutionary method may also simulate or model all possible policies and compare those.</p>
 
+</section>
 </section>
 </section>
 

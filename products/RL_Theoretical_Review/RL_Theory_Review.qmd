@@ -5,7 +5,16 @@ format: html
 bibliography: ../../main.bib
 ---
 
+## Reinforcement Learning Resources
+
+* [Reinforcement Learning: An Introduction, Second Edition, Sutton and Barto 2018](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf) - Seminal textbook on RL focusing on theoretical apsects. Python code for examples can be found [here](https://github.com/ShangtongZhang/reinforcement-learning-an-introduction/tree/master).
+
+* [Algorithms for Reinforcement Learning, Szepesvari, 2010](https://sites.ualberta.ca/~szepesva/papers/RLAlgsInMDPs.pdf)
+
+
 ## Fundamentals of Reinforcement Learning
+
+Reinforcement Learning (RL) is a computational approach to decision making and goal-directed behavior, that entails an agent learning through interaction with its environment.
 
 ### Elements of RL
 
@@ -19,7 +28,10 @@ Basic elements of reinforcement learning [@Sutton2020Reinforcementlearningintrod
 
 -   Some RL systems involve a **model**, which mimic the environment and allow the agent to make inferences about how the environment will change during interactions. The model is used by the agent to plan actions give the state.
 
-The RL methods covered in @Sutton2020Reinforcementlearningintroduction are focused on estimation of value functions. They do not cover "genetic algorithms, genetic programming, simulated annealing, and other optimization methods", which do not estimate value functions [@Sutton2020Reinforcementlearningintroduction, p. 7]. These *evolutionary* methods do not change the policy due to experience, but keep a static policy throughout.
+#### Evolutionary vs Learning Models
+The RL methods covered in @Sutton2020Reinforcementlearningintroduction are focused on estimation of value functions. 
+They do not cover "genetic algorithms, genetic programming, simulated annealing, and other optimization methods", which do not estimate value functions [@Sutton2020Reinforcementlearningintroduction, p. 7]. 
+These *evolutionary* methods do not change the policy due to experience, but keep a static policy throughout.
 
 These evolutionary methods can be contrasted with *learning* methods. It seems to me that evolutionary methods are those with between agent selection -- each agent has a static policy and selection occurs between "individuals" -- while learning methods generate within agent selection -- the policy is adapted to maximize long-term reward by preferring value functions.
-
+The evolutionary method may also simulate or model all possible policies and compare those.
